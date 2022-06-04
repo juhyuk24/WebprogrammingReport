@@ -1,6 +1,12 @@
-var today = new Date();
+function startTimer() {
+	setInterval("autoTimer()", 1000);
+}
 
-document.write("방문 시각 : " + today.toLocaleString() + "<br>");
+function autoTimer() {
+	var time = document.getElementById("time");
+	var today = new Date();
+	time.innerHTML = "현재 시각 : " + today.toLocaleString() + "<br>";
+}
 
 function nsum() {
 	var n = prompt("0보다 큰 정수를 입력하세요", 0);
